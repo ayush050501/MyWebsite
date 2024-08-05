@@ -11,7 +11,7 @@ function ThemeSwitcher() {
   const [colorTheme, setColorTheme] = useState('default');
 
   useEffect(() => {
-    document.documentElement.classList.remove('theme-orange', 'theme-blue');
+    document.documentElement.classList.remove('theme-orange', 'theme-blue', 'theme-slate', 'theme-green', 'theme-yellow');
     if (colorTheme !== 'default') {
       document.documentElement.classList.add(`theme-${colorTheme}`);
     }
@@ -33,6 +33,15 @@ function ThemeSwitcher() {
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setColorTheme('blue')}>
           Blue Theme
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setColorTheme('slate')}>
+          Gray Theme
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setColorTheme('green')}>
+          Green Theme
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setColorTheme('yellow')}>
+          Yellow Theme
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
